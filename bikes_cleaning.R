@@ -35,12 +35,14 @@ longitudes = do.call("rbind", lapply(bikes_result, "[[", "lon"))
 station_names = do.call("rbind", lapply(bikes_result, "[[", "commonName"))
 stations = data.frame(latitude=latitudes, longitude=longitudes, name=station_names)
 
+# Plot docking stations
 m = leaflet(stations) %>%
   addTiles() %>%
   addCircles(lng=~longitude, lat=~latitude, radius=20, popup=~name)
 
 saveWidget(m, "santander_locations.html")
 
+# Repeat for New York
 temp = tempfile()
 download.file("https://s3.amazonaws.com/tripdata/202311-citibike-tripdata.csv.zip", temp, mode="wb")
 nyc_bikes = read.table(unz(temp, "202311-citibike-tripdata.csv"), sep=',', header=T)
