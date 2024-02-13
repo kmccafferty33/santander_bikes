@@ -1,3 +1,3 @@
 # Santander Bikes investigation for interview technical assessment
-
+Using the Citi Bike monthly reports (https://citibikenyc.com/system-data/operating-reports) and information found about the Santander Cycle scheme online (https://en.wikipedia.org/wiki/Santander_Cycles), I first plotted the different expansions to show that the Citi Bike scheme is expanding much faster. New York is a similarly sized area and population to London so Citi Bike scheme seemed to be a good compariison to the Santander cycles scheme and one from which lessons could be learnt about how best to target exapansions to different areas.
 
